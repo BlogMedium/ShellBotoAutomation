@@ -18,7 +18,7 @@ INSTANCE_REGION=$(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
 
 install_cloudwatch_agent() {
   local config_url="$1"
-  local config_file="/opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent.json"
+  local config_file="/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json"
 
   # Step 1: Install the CloudWatch Agent
   echo "Installing CloudWatch Agent..."
