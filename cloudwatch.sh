@@ -38,7 +38,7 @@ install_cloudwatch_agent() {
   # Step 3: Start the CloudWatch Agent
   echo "Starting CloudWatch Agent..."
   sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl \
-    -a start -m ec2 \
+    -a fetch-config -m ec2 \
     -c "file:$config_file" -s
 
   echo "CloudWatch Agent started in region: $INSTANCE_REGION"
